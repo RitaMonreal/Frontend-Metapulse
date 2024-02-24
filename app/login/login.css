@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #0C134F, #D4ADFC); 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login {
+  position: relative;
+  width: 600px;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.login h1 {
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login input {
+  padding: 8px;
+  margin-bottom: 15px;
+  background-color: #f1f2fe;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregamos una sombra en la parte inferior de los inputs */
+}
+
+.login button {
+  background-color: #070F2B;
+  color: #D0D1D7;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #6D7182;
+  color: #070F2B;
+}
+
+
+.login {
+  position: relative; /* Agregamos posición relativa para poder posicionar el círculo */
+  width: 600px;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login::before {
+  content: '';
+  position: absolute;
+  top: -72px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #fff; 
+}
+
