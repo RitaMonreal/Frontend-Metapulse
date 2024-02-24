@@ -10,6 +10,7 @@ function Login() {
         <button type="submit">LOGIN</button>
       </form>
       <div className="circle-image">
+     
       </div>
     </div>
   );
