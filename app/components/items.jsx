@@ -1,18 +1,14 @@
 function Items({ items }){
     return(
-        <ul>
+        <div className="grid grid-cols-4 gap-4">
             {items.map((item) => (
-                <li key={item.id}>
-                    <div>
-                        <h5>
-                            {item.id} {item.first_name} {item.last_name}
-                        </h5>
-                        <p>{item.email}</p>
-                    </div>
+                <div key={item.id} className="flex flex-col items-center bg-customColor">
                     <img src={item.avatar} alt={item.email}/>
-                </li>
+                    <h5>{item.first_name} {item.last_name}</h5>
+                    <p>{item.email}</p>
+                </div>
             ))}
-        </ul>
+        </div>
     )
 }
 
