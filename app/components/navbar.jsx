@@ -1,19 +1,15 @@
-import React from 'react';
-import '../components/navbar.css';
-
-
-const Navbar = () => {
+const navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="logo">
-       
+    <header>
+      <div className="flex bg-navbarPurple justify-center py-6">
+        <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+          <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            Metapulse
+          </span>
+        </button>
       </div>
-      <div className="buttons">
-        <button>Botón 1</button>
-        <button>Botón 2</button>
-      </div>
-    </nav>
+    </header>
   );
-}
+};
 
-export default Navbar;
+export default navbar;
