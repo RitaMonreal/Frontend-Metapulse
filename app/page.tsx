@@ -1,6 +1,9 @@
 import Login from '../app/login/page';
 
-function IndexPage() {
+
+
+async function IndexPage() {
+  
   return <Login />;
 }
 
