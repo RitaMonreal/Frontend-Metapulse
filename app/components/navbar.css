@@ -1,0 +1,35 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #070F2B;
+    padding: 10px 20px;
+    color: white;
+    height: 101px;
+  }
+
+  .logo{
+    border-radius: 30px;
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    background-image: url('../../public/images/letras_metapulse.png');
+    background-size: cover;
+  }
+  
+  
+  
+  .buttons button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px; /* Espacio entre los botones */
+    cursor: pointer;
+  }
+  
