@@ -11,13 +11,7 @@
     outline: 1px solid rgba(22, 168, 245, 0.5); 
   }
 
-  .money {
-    display: flex;
-    align-items: center;
-    color: white;
-  }
-
-  .money div:first-child {
+  #icon_moneda {
     border-radius: 50%; 
     background-image: url('../../public/images/coin.png');
     background-size: cover;
@@ -40,14 +34,18 @@
   }
 
   .buttons button {
-    background-color: #3D78ED; 
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 21.6px;
     margin-left: 10px;
     cursor: pointer;
   }
+
+  .white-text {
+    color: white;
+  }
+  
