@@ -1,0 +1,27 @@
+
+
+  .logo{
+    border-radius: 30px;
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    background-image: url('../../public/images/letras_metapulse.png');
+    background-size: cover;
+    box-shadow: 0 0 30px 15px rgba(22, 168, 245, 0.5); 
+    outline: 1px solid rgba(22, 168, 245, 0.5); 
+  }
+  
+  
+  
+  .buttons button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px; /* Espacio entre los botones */
+    cursor: pointer;
+  }
