@@ -10,11 +10,37 @@
     box-shadow: 0 0 30px 15px rgba(22, 168, 245, 0.5); 
     outline: 1px solid rgba(22, 168, 245, 0.5); 
   }
-  
-  
-  
+
+  .money {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .money div:first-child {
+    border-radius: 50%; 
+    background-image: url('../../public/images/coin.png');
+    background-size: cover;
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-icon {
+    border-radius: 50%; 
+    color: white;
+    background-color: #BCB9F4; 
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .buttons button {
-    background-color: #4CAF50; /* Color de fondo del botón */
+    background-color: #3D78ED; 
     border: none;
     color: white;
     padding: 10px 20px;
@@ -22,6 +48,6 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-left: 10px; /* Espacio entre los botones */
+    margin-left: 10px;
     cursor: pointer;
   }
