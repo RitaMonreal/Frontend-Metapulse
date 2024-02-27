@@ -1,6 +1,6 @@
 import Navbarr from '../components/navbarR';
 
-const ItemViewPAge = () => {
+const ItemViewPage = () => {
   return (
     <div className="bg-backgroundBlue h-screen w-screen flex flex-col mx-auto p-0">
       <Navbarr />
@@ -9,14 +9,24 @@ const ItemViewPAge = () => {
         <div className="w-1/2 flex flex-col p-8">
           {/* Imagen item */}
           <div className="h-1/2 mx-auto">
-            <div className="w-64 h-20 rounded-md overflow-hidden">
+            <div className="h-full rounded-md overflow-hidden">
               <img src="/images/logo_metapulse.png" alt="Imagen item" />
             </div>
           </div>
           {/* Descripcion item */}
-          <div className="h-1/2 mx-auto flex flex-col">
-            <label htmlFor="descripcionItem">Description:</label>
-            <textarea className="w-3/5" id="descripcionItem"></textarea>
+          <div className="h-1/2 w-full mx-auto flex flex-col mt-6 gap-4">
+            <label
+              htmlFor="descripcionItem"
+              className="text-textGray text-3xl "
+            >
+              Description
+            </label>
+            <div className="w-full h-full">
+              <textarea
+                id="descripcionItem"
+                className="w-full h-full rounded-md resize-none"
+              ></textarea>
+            </div>
           </div>
         </div>
         {/* Lado derecho */}
@@ -55,4 +65,4 @@ const ItemViewPAge = () => {
   );
 };
 
-export default ItemViewPAge;
+export default ItemViewPage;
