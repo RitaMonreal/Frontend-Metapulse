@@ -10,8 +10,9 @@ async function fetchItems() {
 async function Page() {
   const items = await fetchItems();
   return (
-      <NavbarR />
+      
     <div className="bg-backgroundBlue h-screen w-screen flex flex-col mx-auto p-0">
+      <NavbarR />
       <div className="container flex flex-1 mb-16 mx-auto mt-8 gap-11">
         <Items items={items} />
       </div>
