@@ -1,13 +1,12 @@
 import Navbarr from '../../components/navbarR';
 
-async function getItem(id){
-  const res = await fetch(`https://reqres.in/api/users/${id}`)
-  const data = await res.json()
-  return data.data
+async function getItem(id) {
+  const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const data = await res.json();
+  return data;
 }
-async function ItemViewPage ({ params }) {
-
-  const item = await getItem(params.id)
+async function ItemViewPage({ params }) {
+  const item = await getItem(params.id);
 
   return (
     <div className="bg-backgroundBlue h-screen w-screen flex flex-col mx-auto p-0">
@@ -18,7 +17,7 @@ async function ItemViewPage ({ params }) {
           {/* Imagen item */}
           <div className="h-1/2 mx-auto">
             <div className="h-full rounded-md overflow-hidden">
-              <img src={item.avatar} alt="Imagen item" />
+              <img src={item.image} alt="Imagen item" />
             </div>
           </div>
           {/* Descripcion item */}
@@ -30,11 +29,11 @@ async function ItemViewPage ({ params }) {
               Description
             </label>
             <div className="w-full h-full">
-             <textarea
+              <textarea
                 id="descripcionItem"
                 className="w-full h-full rounded-md resize-none"
-                value={item.email} 
-                readOnly 
+                value={item.description}
+                readOnly
               ></textarea>
             </div>
           </div>
@@ -43,7 +42,9 @@ async function ItemViewPage ({ params }) {
         <div className="w-1/2 p-8 flex flex-col">
           {/* Nombre item */}
           <div className="flex flex-col gap-6 ml-12">
-            <h1 className="text-textGray text-6xl font-semibold">{item.first_name} </h1>
+            <h1 className="text-textGray text-6xl font-semibold">
+              {item.first_name}{' '}
+            </h1>
 
             <div className="flex items-center gap-4">
               <div className="h-1/2 flex items-center justify-center">
@@ -55,7 +56,7 @@ async function ItemViewPage ({ params }) {
                   />
                 </div>
               </div>
-              <p className="text-white text-xl">5000</p>
+              <p className="text-white text-xl">{item.price}</p>
             </div>
           </div>
           {/* Boton buy */}
@@ -73,6 +74,6 @@ async function ItemViewPage ({ params }) {
       </div>
     </div>
   );
-};
+}
 
 export default ItemViewPage;
