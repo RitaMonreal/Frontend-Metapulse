@@ -14,7 +14,7 @@ function Items({ items }) {
       {items.map((item) => (
         <div
           key={item.id}
-          className="flex flex-col items-center bg-customColor"
+          className="flex flex-col items-center bg-customColor cursor-pointer"
           style={{ width: '312px', height: '220px' }}
           onClick={() => handleClick(item.id)}
         >
@@ -25,7 +25,7 @@ function Items({ items }) {
           />
           <h5>{item.price}</h5>
           <h5>{item.category}</h5>
-          <p>{item.description}</p>
+          <p className="line-clamp-3">{item.description}</p>
         </div>
       ))}
     </div>
