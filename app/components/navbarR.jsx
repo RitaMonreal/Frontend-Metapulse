@@ -31,7 +31,7 @@ const Navbarr = () => {
           RM
         </div>
         <Link href="/sellview">
-        <button className="bg-blueButton px-4 py-2 text-white font-bold">
+        <button className="bg-blueButton px-4 py-2 text-white font-bold rounded-lg">
           Sell
         </button>
         </Link>

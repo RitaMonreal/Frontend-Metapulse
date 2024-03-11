@@ -15,7 +15,7 @@ function Items({ items }) {
         <div
           key={item.id}
           className="flex flex-col items-center bg-customColor cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
-          style={{ width: '310px', height: '260px',boxShadow: '0 0 15px 7px rgba(0, 0, 255, 0.5)', }}
+          style={{ width: '310px', height: '260px', boxShadow: '0px 0px 15px 7px rgba(0, 0, 255, 0.5)'}}
            
           onClick={() => handleClick(item.id)}
         >
