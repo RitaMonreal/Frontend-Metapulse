@@ -15,7 +15,7 @@ function Items({ items }) {
         <div
           key={item.id}
           className="flex flex-col items-center bg-customColor cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
-          style={{ width: '310px', height: '240px',boxShadow: '0 0 15px 7px rgba(0, 0, 255, 0.5)', }}
+          style={{ width: '310px', height: '260px',boxShadow: '0 0 15px 7px rgba(0, 0, 255, 0.5)', }}
            
           onClick={() => handleClick(item.id)}
         >
@@ -23,8 +23,22 @@ function Items({ items }) {
             src={item.image}
             style={{ width: '288px', height: '180px', padding: '16px' }}
           />
-          <h5>{item.price}</h5>
-          <h5>{item.category}</h5>
+          <div>
+              <div className="flex items-center gap-4">
+                <div className="h-1/2 flex items-center justify-center">
+                  <div className="w-5 h-5 rounded-md overflow-hidden">
+                    <img
+                      src="/images/coin.png"
+                      alt="Imagen item"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <p className="text-white">{item.price}</p>
+              </div>
+            </div>
+          
+          <h5 className="text-white">{item.category}</h5>
           
         </div>
       ))}
