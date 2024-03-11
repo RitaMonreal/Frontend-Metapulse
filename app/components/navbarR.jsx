@@ -20,7 +20,7 @@ const Navbarr = () => {
       <div className="flex w-1/2 items-center justify-end gap-16 mr-8">
         <div className="flex items-center gap-4">
           <img src="/images/coin.png" alt="monedas jugador" className="w-10" />
-          <div className="text-white">200</div>
+          <div className="text-white">20000</div>
         </div>
 
         <div className="bg-purple-300 rounded-full p-2 text-white cursor-pointer">

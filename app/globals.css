@@ -90,3 +90,7 @@
   background-color: #535c91; /* Cambia el color del thumb (agarre) de la barra de desplazamiento */
   border-radius: 20px; /* Agrega bordes redondeados al thumb (agarre) de la barra de desplazamiento */
 }
+
+.custom-glow {
+  box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.5); /* Ajusta el tamaño y el color del resplandor */
+}

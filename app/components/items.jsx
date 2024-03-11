@@ -14,18 +14,17 @@ function Items({ items }) {
       {items.map((item) => (
         <div
           key={item.id}
-          className="flex flex-col items-center bg-customColor cursor-pointer"
-          style={{ width: '312px', height: '220px' }}
+          className="flex flex-col items-center bg-customColor cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-blue-700"
+          style={{ width: '310px', height: '240px' }}
           onClick={() => handleClick(item.id)}
         >
           <img
             src={item.image}
-            alt={item.email}
-            style={{ width: '288px', height: '140px', padding: '16px' }}
+            style={{ width: '288px', height: '180px', padding: '16px' }}
           />
           <h5>{item.price}</h5>
           <h5>{item.category}</h5>
-          <p className="line-clamp-3">{item.description}</p>
+      
         </div>
       ))}
     </div>
