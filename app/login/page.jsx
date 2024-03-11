@@ -1,5 +1,7 @@
+import { AlertDialogDemo } from '../alertDialog';
 import '../login/login.css';
-
+import { AlertDialog
+ } from '@radix-ui/react-alert-dialog';
 function Login() {
   return (
     <div className="login">
@@ -10,9 +12,10 @@ function Login() {
         <button type="submit">LOGIN</button>
       </form>
       <div className="circle-image">
-     
+    
       </div>
     </div>
+
   );
 }
 

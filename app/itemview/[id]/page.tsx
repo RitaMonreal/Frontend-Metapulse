@@ -1,4 +1,7 @@
 import Navbarr from '../../components/navbarR';
+import { AlertDialogDemo } from '../../alertDialog';
+import { AlertDialog} from '@radix-ui/react-alert-dialog';
+
 
 async function getItem(id) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -13,14 +16,14 @@ async function ItemViewPage({ params }) {
     <div className="bg-backgroundBlue min-h-screen w-screen flex flex-col mx-auto p-0 overflow-y-auto">
       
       <Navbarr />
-      <div className="flex bg-backgroundPurple h-3/4 w-5/6 mx-auto mt-12 rounded-md">
+      <div className="flex bg-backgroundPurple h-96 w-5/6 mx-auto mt-12 rounded-md">
         {/* Lado izquierdo */}
         <div className="w-1/2 flex flex-col p-8">
           <label htmlFor="titleItem" className="text-textGray text-3xl ">
             {item.category}
           </label>
           {/* Imagen item */}
-          <div className="h-5/6 mx-auto">
+          <div className="h-3/4 mx-auto">
             <div className="h-full rounded-md overflow-hidden">
               <img src={item.image} alt="Imagen item" />
             </div>
@@ -61,6 +64,7 @@ async function ItemViewPage({ params }) {
             </div>
             {/* Boton buy */}
             <div>
+            <AlertDialogDemo/>
               <button
                 type="button"
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
