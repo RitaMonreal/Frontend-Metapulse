@@ -56,6 +56,7 @@ module.exports = {
         navbarPurple: '#070F2B',
         backgroundPurple: '#535C91',
         textGray: '#D0D1D7',
+        blueButton: '#3D78ED',
       },
       borderRadius: {
         lg: 'var(--radius)',

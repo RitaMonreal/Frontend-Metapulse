@@ -2,28 +2,37 @@
 import {useRouter} from 'next/navigation'
 import React from 'react';
 import '../components/navbarR.css';
-
+import Link from 'next/link';
 
 const Navbarr = () => {
 
   const router = useRouter()
 
   return (
-    <nav className="flex justify-between bg-navbarPurple py-6 px-4">
-      <div className="logo hover:bg-slate-500" onClick={()=> {
-        router.push(`/websiteview`)
-      }}> </div>
-      <div className="flex left-content">
-        <div id="icon_moneda" className="mr-2"></div>
-        <div className="mr-8 white-text" >50</div>
-     
-      <div className="profile-icon mr-8">RM</div>
-      <div className="buttons">
-        <button className="bg-blue-700 hover:bg-slate-500 mx-auto">Sell</button>
+    <header className="flex bg-navbarPurple py-4">
+      <div className="flex w-1/2 ml-8">
+        <button className="bg-white rounded-full px-4 py-2 border-2 border-blue-500 shadow-lg hover:shadow-blue-700">
+          <span class="bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text text-xl">
+            Metapulse
+          </span>
+        </button>
       </div>
-      </div>
-    </nav>
-  );
-}
+      <div className="flex w-1/2 items-center justify-end gap-16 mr-8">
+        <div className="flex items-center gap-4">
+          <img src="/images/coin.png" alt="monedas jugador" className="w-10" />
+          <div className="text-white">200</div>
+        </div>
 
-export default Navbarr; 
+        <div className="bg-purple-300 rounded-full p-2 text-white cursor-pointer">
+          RM
+        </div>
+
+        <button className="bg-blueButton px-4 py-2 text-white font-bold">
+          Sell
+        </button>
+      </div>
+    </header>
+  );
+};
+
+export default Navbarr;
