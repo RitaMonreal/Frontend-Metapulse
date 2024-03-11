@@ -5,6 +5,7 @@ async function getItem(id) {
   const data = await res.json();
   return data;
 }
+
 async function ItemViewPage({ params }) {
   const item = await getItem(params.id);
 
@@ -12,20 +13,23 @@ async function ItemViewPage({ params }) {
     <div className="bg-backgroundBlue h-screen w-screen flex flex-col mx-auto p-0">
       <Navbarr />
       <div className="flex bg-backgroundPurple h-3/4 w-5/6 mx-auto mt-12 rounded-md">
-        {/* lado izquierdo */}
+        {/* Lado izquierdo */}
         <div className="w-1/2 flex flex-col p-8">
+          <label htmlFor="titleItem" className="text-textGray text-3xl ">
+            {item.category}
+          </label>
           {/* Imagen item */}
-          <div className="h-1/2 mx-auto">
+          <div className="h-5/6 mx-auto">
             <div className="h-full rounded-md overflow-hidden">
               <img src={item.image} alt="Imagen item" />
             </div>
           </div>
+        </div>
+        {/* Lado derecho */}
+        <div className="w-1/2 p-8 flex flex-col">
           {/* Descripcion item */}
           <div className="h-1/2 w-full mx-auto flex flex-col mt-6 gap-4">
-            <label
-              htmlFor="descripcionItem"
-              className="text-textGray text-3xl "
-            >
+            <label htmlFor="descripcionItem" className="text-textGray text-3xl ">
               Description
             </label>
             <div className="w-full h-full">
@@ -37,30 +41,24 @@ async function ItemViewPage({ params }) {
               ></textarea>
             </div>
           </div>
-        </div>
-        {/* Lado derecho */}
-        <div className="w-1/2 p-8 flex flex-col">
-          {/* Nombre item */}
-          <div className="flex flex-col gap-6 ml-12">
-            <h1 className="text-textGray text-6xl font-semibold">
-              {item.first_name}{' '}
-            </h1>
-
-            <div className="flex items-center gap-4">
-              <div className="h-1/2 flex items-center justify-center">
-                <div className="w-12 h-12 rounded-md overflow-hidden">
-                  <img
-                    src="/images/coin.png"
-                    alt="Imagen item"
-                    className="w-full h-full object-cover"
-                  />
+          {/* Precio y botón Buy */}
+          <div className="flex flex-row justify-between items-end mt-6">
+            {/* Precio */}
+            <div>
+              <div className="flex items-center gap-4">
+                <div className="h-1/2 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-md overflow-hidden">
+                    <img
+                      src="/images/coin.png"
+                      alt="Imagen item"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
+                <p className="text-white text-xl">{item.price}</p>
               </div>
-              <p className="text-white text-xl">{item.price}</p>
             </div>
-          </div>
-          {/* Boton buy */}
-          <div className="flex flex-1 justify-start items-end ml-12">
+            {/* Boton buy */}
             <div>
               <button
                 type="button"
