@@ -19,7 +19,7 @@ const Navbarr = () => {
           </span>
         </button>
         
-        </Link>
+        </Link >
       </div>
       <div className="flex w-1/2 items-center justify-end gap-16 mr-8">
         <div className="flex items-center gap-4">
@@ -30,10 +30,11 @@ const Navbarr = () => {
         <div className="bg-purple-300 rounded-full p-2 text-white cursor-pointer">
           RM
         </div>
-
+        <Link href="/sellview">
         <button className="bg-blueButton px-4 py-2 text-white font-bold">
           Sell
         </button>
+        </Link>
       </div>
     </header>
   );

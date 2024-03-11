@@ -10,7 +10,8 @@ async function ItemViewPage({ params }) {
   const item = await getItem(params.id);
 
   return (
-    <div className="bg-backgroundBlue h-screen w-screen flex flex-col mx-auto p-0">
+    <div className="bg-backgroundBlue min-h-screen w-screen flex flex-col mx-auto p-0 overflow-y-auto">
+      
       <Navbarr />
       <div className="flex bg-backgroundPurple h-3/4 w-5/6 mx-auto mt-12 rounded-md">
         {/* Lado izquierdo */}
